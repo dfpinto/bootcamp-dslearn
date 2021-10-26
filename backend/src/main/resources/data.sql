@@ -12,3 +12,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+INSERT INTO tb_course(name, img_uri, img_gray_uri) VALUES('BootCamp HTML', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 'https://images.app.goo.gl/X1qWNUAYy4t4kCge7');
+
+INSERT INTO tb_offer(edition, star_moment, end_moment, course_id) VALUES('1.0', TIMESTAMP WITH TIME ZONE '2021-10-25T03:00:00Z', TIMESTAMP WITH TIME ZONE '2022-10-25T03:00:00Z', 1);
+INSERT INTO tb_offer(edition, star_moment, end_moment, course_id) VALUES('2.0', TIMESTAMP WITH TIME ZONE '2021-12-25T03:00:00Z', TIMESTAMP WITH TIME ZONE '2022-12-25T03:00:00Z', 1);
