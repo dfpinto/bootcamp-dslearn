@@ -25,3 +25,6 @@ INSERT INTO tb_resource(title, description, img_uri, type, position, offer_id) V
 INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 1', 'Neste capítulo vamos começar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 1, 1, null);
 INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 2', 'Neste capítulo vamos continuar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 2, 1, 1);
 INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 3', 'Neste capítulo vamos finalizar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 3, 1, 2);
+
+INSERT INTO tb_enrollment(user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES(1, 1, TIMESTAMP WITH TIME ZONE '2021-10-25T13:00:00Z', NULL, TRUE, FALSE);
+INSERT INTO tb_enrollment(user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES(2, 1, TIMESTAMP WITH TIME ZONE '2021-10-25T13:00:00Z', NULL, TRUE, FALSE);
