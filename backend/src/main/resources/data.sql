@@ -21,3 +21,7 @@ INSERT INTO tb_offer(edition, star_moment, end_moment, course_id) VALUES('2.0', 
 INSERT INTO tb_resource(title, description, img_uri, type, position, offer_id) VALUES('Trilha HTML', 'Trilha principal do curso', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 1, 1, 1);
 INSERT INTO tb_resource(title, description, img_uri, type, position, offer_id) VALUES('Forum', 'Tira suas dúvidas', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 2, 2, 1);
 INSERT INTO tb_resource(title, description, img_uri, type, position, offer_id) VALUES('Live', 'Lives exclusivas para a turma', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 0, 3, 1);
+
+INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 1', 'Neste capítulo vamos começar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 1, 1, null);
+INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 2', 'Neste capítulo vamos continuar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 2, 1, 1);
+INSERT INTO tb_section(title, description, img_uri, position, resource_id, prerequisite_id) VALUES('Capítulo 3', 'Neste capítulo vamos finalizar', 'https://images.app.goo.gl/NWXDyrkZCGybcW4B6', 3, 1, 2);
