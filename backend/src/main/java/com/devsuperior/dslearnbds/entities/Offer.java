@@ -26,7 +26,7 @@ public class Offer implements Serializable {
 	private String edition;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant starMoment;
+	private Instant startMoment;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant endMoment;
@@ -42,11 +42,11 @@ public class Offer implements Serializable {
 	public Offer() {
 	}
 
-	public Offer(Long id, String edition, Instant starMoment, Instant endMoment) {
+	public Offer(Long id, String edition, Instant startMoment, Instant endMoment) {
 		super();
 		this.id = id;
 		this.edition = edition;
-		this.starMoment = starMoment;
+		this.startMoment = startMoment;
 		this.endMoment = endMoment;
 	}
 
@@ -66,12 +66,12 @@ public class Offer implements Serializable {
 		this.edition = edition;
 	}
 
-	public Instant getStarMoment() {
-		return starMoment;
+	public Instant getStartMoment() {
+		return startMoment;
 	}
 
-	public void setStarMoment(Instant starMoment) {
-		this.starMoment = starMoment;
+	public void setStartMoment(Instant startMoment) {
+		this.startMoment = startMoment;
 	}
 
 	public Instant getEndMoment() {
