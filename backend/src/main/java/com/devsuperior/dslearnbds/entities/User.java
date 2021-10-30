@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -35,6 +36,12 @@ public class User implements Serializable {
 			   joinColumns = @JoinColumn(name = "user_id"),
 			   inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
+	
+	@OneToMany(mappedBy = "user")
+	private Set<Notification> notifications = new HashSet<>(); 
+
+	@OneToMany(mappedBy = "author")
+	private Set<Topic> topics = new HashSet<>(); 
 
 	public User() {
 	}
@@ -45,6 +52,10 @@ public class User implements Serializable {
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
+	}
+
+	public Set<Notification> getNotifications() {
+		return notifications;
 	}
 
 	public Long getId() {
@@ -83,8 +94,8 @@ public class User implements Serializable {
 		return roles;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public Set<Topic> getTopics() {
+		return topics;
 	}
 
 	@Override

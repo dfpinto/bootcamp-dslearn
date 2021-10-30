@@ -38,6 +38,12 @@ public class Offer implements Serializable {
 	@OneToMany(mappedBy = "offer")
 	private Set<Resource> resources = new HashSet<>();
 	
+	@OneToMany(mappedBy = "offer")
+	private Set<Topic> topics = new HashSet<>();
+	
+	public Set<Topic> getTopics() {
+		return topics;
+	}
 	
 	public Offer() {
 	}

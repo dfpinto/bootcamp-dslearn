@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -43,6 +44,21 @@ public abstract class Lesson implements Serializable{
 			   )
 	private Set<Enrollment> enrollmentsDone = new HashSet<>();
 	
+	@OneToMany(mappedBy = "lesson")
+	private Set<Deliver> deliveries = new HashSet<>();
+
+	@OneToMany(mappedBy = "lesson")
+	private Set<Topic> topics = new HashSet<>();
+	
+	public Set<Topic> getTopics() {
+		return topics;
+	}
+
+	public Set<Deliver> getDeliveries() {
+		return deliveries;
+	}
+
+
 	public Lesson() {
 	}
 

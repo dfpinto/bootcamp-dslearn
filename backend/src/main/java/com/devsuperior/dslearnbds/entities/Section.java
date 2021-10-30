@@ -10,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.devsuperior.dslearnbds.entities.enums.ResourceType;
-
 @Entity
 @Table(name = "tb_section")
 public class Section  implements Serializable {
