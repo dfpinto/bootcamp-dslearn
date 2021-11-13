@@ -21,9 +21,9 @@ public class NotificationService {
 	private AuthService authService;
 	
 	@Transactional(readOnly = true)
-	public Page<NotificationDTO> notificationForCurrentUser(Pageable pageable){
+	public Page<NotificationDTO> notificationForCurrentUser(boolean unreadOnly, Pageable pageable){
 		User user = authService.authenticated(); 
-		Page<Notification> pageNotification = notificationRepository.findByUser(user, pageable);
+		Page<Notification> pageNotification = notificationRepository.find(user, unreadOnly, pageable);
 		return pageNotification.map(x -> new NotificationDTO(x));
 	}
 }
